@@ -53,7 +53,7 @@ function Signup() {
               variant="outlined"
               type="password"
               fullWidth
-              value={formik.values.password}
+              value={formik.values.password} 
               onChange={formik.handleChange}
             />
           </Grid>
