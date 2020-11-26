@@ -24,15 +24,29 @@ class Firebase {
     console.log("this.firebaseAuth", this.firebaseAuth);
   }
 
+  // register registerWithEmailAndPassword
+  register(email, password) {
+    this.firebaseAuth.createUserWithEmailAndPassword(email, password)
+  }
+
+  // sign in with google GoogleAuthProvider
+
+  useGoogleProvider() {
+    const googleProvider = new firebase.auth.GithubAuthProvider();
+    googleProvider.setCustomParameters({prompt: "select_account"})
+    this.firebaseAuth.signInWithPopup(googleProvider);
+
+  }
+
   // login  signInWithEmailAndPassword
 
   // logout signOut
 
   // forgot password sendPasswordResetEmail
 
-  // register registerWithEmailAndPassword
+  
 
-  // sign in with google GoogleAuthProvider
+  
 }
 
 export default new Firebase();
