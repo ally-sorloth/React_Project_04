@@ -33,7 +33,7 @@ class Firebase {
 
   useGoogleProvider() {
     const googleProvider = new firebase.auth.GithubAuthProvider();
-    googleProvider.setCustomParameters({prompt: "select_account"})
+    googleProvider.setCustomParameters({ prompt: "select_account" });
     this.firebaseAuth.signInWithPopup(googleProvider);
 
   }
